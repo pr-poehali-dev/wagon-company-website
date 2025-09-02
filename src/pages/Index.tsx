@@ -13,49 +13,69 @@ const Index = () => {
       id: 'tank',
       name: 'Цистерны',
       description: 'Специализированные вагоны для перевозки жидких грузов',
+      detailedDescription: 'Современные цистерны ОВК предназначены для безопасной транспортировки нефтепродуктов, химических веществ и других жидких грузов. Оборудованы системами контроля температуры и давления.',
+      image: '/img/4560ffdf-e71d-41e5-9fab-e58a7b0c21e3.jpg',
       specs: {
         capacity: '85 м³',
         weight: '22 т',
         length: '14,6 м',
-        loading: 'Верхняя и нижняя'
+        loading: 'Верхняя и нижняя',
+        maxSpeed: '120 км/ч',
+        axles: '4 оси',
+        material: 'Высокопрочная сталь 09Г2С'
       },
-      features: ['Антикоррозийное покрытие', 'Система подогрева', 'Автоматическая разгрузка']
+      features: ['Антикоррозийное покрытие', 'Система подогрева', 'Автоматическая разгрузка', 'Контроль давления', 'Теплоизоляция', 'Система очистки']
     },
     {
       id: 'gondola',
       name: 'Полувагоны',
       description: 'Универсальные грузовые вагоны открытого типа',
+      detailedDescription: 'Полувагоны ОВК обеспечивают эффективную перевозку насыпных и навалочных грузов: угля, руды, щебня, зерна. Усиленная конструкция выдерживает экстремальные нагрузки.',
+      image: '/img/0e4bd947-79cb-4e72-8c16-4b4a30ec3493.jpg',
       specs: {
         capacity: '125 м³',
         weight: '23 т',
         length: '15,9 м',
-        loading: 'Верхняя'
+        loading: 'Верхняя',
+        maxSpeed: '120 км/ч',
+        axles: '4 оси',
+        material: 'Низколегированная сталь'
       },
-      features: ['Усиленное днище', 'Боковые разгрузочные люки', 'Стальные борта']
+      features: ['Усиленное днище', 'Боковые разгрузочные люки', 'Стальные борта', 'Система креплений', 'Антикоррозийная обработка', 'Износостойкие материалы']
     },
     {
       id: 'hopper',
       name: 'Хопперы',
       description: 'Вагоны для сыпучих грузов с нижней разгрузкой',
+      detailedDescription: 'Хопперы-дозаторы для транспортировки цемента, зерна, минеральных удобрений. Герметичная конструкция защищает груз от внешних воздействий и обеспечивает быструю разгрузку.',
+      image: '/img/e0f4b4f8-a203-4432-a1ba-442c71384581.jpg',
       specs: {
         capacity: '120 м³',
         weight: '25 т',
         length: '17,2 м',
-        loading: 'Верхняя/Нижняя'
+        loading: 'Верхняя/Нижняя',
+        maxSpeed: '120 км/ч',
+        axles: '4 оси',
+        material: 'Специальная сталь с покрытием'
       },
-      features: ['Герметичность', 'Пневморазгрузка', 'Антипригарное покрытие']
+      features: ['Герметичность', 'Пневморазгрузка', 'Антипригарное покрытие', 'Система дозирования', 'Автоматические люки', 'Контроль влажности']
     },
     {
       id: 'flatcar',
       name: 'Платформы',
       description: 'Для перевозки контейнеров и крупногабаритных грузов',
+      detailedDescription: 'Универсальные платформы для контейнерных перевозок и негабаритных грузов. Соответствуют международным стандартам ISO, оборудованы системами крепления.',
+      image: '/img/f97913e8-74ab-4438-895b-702519a06052.jpg',
       specs: {
         capacity: '75 т',
         weight: '20 т',
         length: '19,6 м',
-        loading: 'Боковая/Торцевая'
+        loading: 'Боковая/Торцевая',
+        maxSpeed: '120 км/ч',
+        axles: '4 оси',
+        material: 'Конструкционная сталь'
       },
-      features: ['Фитинги для контейнеров', 'Съёмные стойки', 'Противоскользящее покрытие']
+      features: ['Фитинги для контейнеров', 'Съёмные стойки', 'Противоскользящее покрытие', 'Система креплений', 'Торцевые упоры', 'Складные борта']
     }
   ];
 
@@ -99,8 +119,16 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-r from-steel-dark to-steel-medium text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.1)_50%,transparent_75%)] bg-[length:20px_20px]"></div>
+      <section className="relative py-24 text-white overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src="/img/f25c72f3-a7a6-49f4-bb31-15d2d902cad5.jpg" 
+            alt="Промышленный комплекс ОВК" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-steel-dark/90 to-steel-medium/80"></div>
+          <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.05)_50%,transparent_75%)] bg-[length:20px_20px]"></div>
+        </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -194,11 +222,35 @@ const Index = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <Tabs defaultValue="specs">
+                    <Tabs defaultValue="overview">
                       <TabsList className="mb-6">
+                        <TabsTrigger value="overview">Обзор</TabsTrigger>
                         <TabsTrigger value="specs">Характеристики</TabsTrigger>
                         <TabsTrigger value="features">Особенности</TabsTrigger>
                       </TabsList>
+                      
+                      <TabsContent value="overview" className="space-y-6">
+                        <div className="grid md:grid-cols-2 gap-6">
+                          <div>
+                            <img 
+                              src={wagonTypes.find(w => w.id === selectedWagon)?.image}
+                              alt={wagonTypes.find(w => w.id === selectedWagon)?.name}
+                              className="w-full h-48 object-cover rounded-lg shadow-md"
+                            />
+                          </div>
+                          <div className="space-y-4">
+                            <h3 className="text-xl font-semibold">{wagonTypes.find(w => w.id === selectedWagon)?.name}</h3>
+                            <p className="text-muted-foreground leading-relaxed">
+                              {wagonTypes.find(w => w.id === selectedWagon)?.detailedDescription}
+                            </p>
+                            <div className="flex flex-wrap gap-2">
+                              <Badge variant="outline">Современная конструкция</Badge>
+                              <Badge variant="outline">Высокая надёжность</Badge>
+                              <Badge variant="outline">Экологичность</Badge>
+                            </div>
+                          </div>
+                        </div>
+                      </TabsContent>
                       
                       <TabsContent value="specs" className="space-y-4">
                         {Object.entries(wagonTypes.find(w => w.id === selectedWagon)?.specs || {}).map(([key, value]) => (
@@ -208,8 +260,11 @@ const Index = () => {
                               {key === 'weight' && 'Масса тары'}
                               {key === 'length' && 'Длина'}
                               {key === 'loading' && 'Тип загрузки'}
+                              {key === 'maxSpeed' && 'Максимальная скорость'}
+                              {key === 'axles' && 'Количество осей'}
+                              {key === 'material' && 'Материал корпуса'}
                             </span>
-                            <span className="text-muted-foreground">{value}</span>
+                            <span className="text-muted-foreground font-medium">{value}</span>
                           </div>
                         ))}
                       </TabsContent>
@@ -217,8 +272,8 @@ const Index = () => {
                       <TabsContent value="features">
                         <div className="grid gap-3">
                           {wagonTypes.find(w => w.id === selectedWagon)?.features.map((feature, index) => (
-                            <div key={index} className="flex items-center gap-3">
-                              <Icon name="CheckCircle" size={20} className="text-green-600" />
+                            <div key={index} className="flex items-center gap-3 p-2 rounded-lg hover:bg-muted/50 transition-colors">
+                              <Icon name="CheckCircle" size={20} className="text-green-600 flex-shrink-0" />
                               <span>{feature}</span>
                             </div>
                           ))}
