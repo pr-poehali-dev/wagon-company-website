@@ -14,7 +14,7 @@ const Index = () => {
       name: 'Цистерны',
       description: 'Специализированные вагоны для перевозки жидких грузов',
       detailedDescription: 'Современные цистерны ОВК предназначены для безопасной транспортировки нефтепродуктов, химических веществ и других жидких грузов. Оборудованы системами контроля температуры и давления.',
-      image: '/img/4560ffdf-e71d-41e5-9fab-e58a7b0c21e3.jpg',
+      image: '/img/fcf5a8a1-a338-4a5b-bc7a-9630fdfa0dea.jpg',
       specs: {
         capacity: '85 м³',
         weight: '22 т',
@@ -31,7 +31,7 @@ const Index = () => {
       name: 'Полувагоны',
       description: 'Универсальные грузовые вагоны открытого типа',
       detailedDescription: 'Полувагоны ОВК обеспечивают эффективную перевозку насыпных и навалочных грузов: угля, руды, щебня, зерна. Усиленная конструкция выдерживает экстремальные нагрузки.',
-      image: '/img/0e4bd947-79cb-4e72-8c16-4b4a30ec3493.jpg',
+      image: '/img/8649b73d-2c19-42a4-8024-d0ed32e5e14c.jpg',
       specs: {
         capacity: '125 м³',
         weight: '23 т',
@@ -48,7 +48,7 @@ const Index = () => {
       name: 'Хопперы',
       description: 'Вагоны для сыпучих грузов с нижней разгрузкой',
       detailedDescription: 'Хопперы-дозаторы для транспортировки цемента, зерна, минеральных удобрений. Герметичная конструкция защищает груз от внешних воздействий и обеспечивает быструю разгрузку.',
-      image: '/img/e0f4b4f8-a203-4432-a1ba-442c71384581.jpg',
+      image: '/img/ae676d55-2522-4379-aaec-29e506c4cbff.jpg',
       specs: {
         capacity: '120 м³',
         weight: '25 т',
@@ -65,7 +65,7 @@ const Index = () => {
       name: 'Платформы',
       description: 'Для перевозки контейнеров и крупногабаритных грузов',
       detailedDescription: 'Универсальные платформы для контейнерных перевозок и негабаритных грузов. Соответствуют международным стандартам ISO, оборудованы системами крепления.',
-      image: '/img/f97913e8-74ab-4438-895b-702519a06052.jpg',
+      image: '/img/332eef00-4681-468b-94c2-7c02739cdcb6.jpg',
       specs: {
         capacity: '75 т',
         weight: '20 т',
@@ -119,56 +119,56 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-24 text-white overflow-hidden">
+      <section className="relative py-32 text-white overflow-hidden min-h-screen flex items-center">
         <div className="absolute inset-0">
           <img 
             src="/img/f25c72f3-a7a6-49f4-bb31-15d2d902cad5.jpg" 
             alt="Промышленный комплекс ОВК" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover scale-105 animate-pulse duration-[3000ms]"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-steel-dark/90 to-steel-medium/80"></div>
-          <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.05)_50%,transparent_75%)] bg-[length:20px_20px]"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-steel-dark/95 via-steel-medium/85 to-transparent"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_40%,rgba(0,0,0,0.3)_100%)]"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-5xl font-bold mb-6 leading-tight">
-                Лидер инновационного <span className="text-steel-light">вагоностроения</span>
+            <div className="scroll-reveal">
+              <h2 className="text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+                Лидер инновационного <span className="gradient-text">вагоностроения</span>
               </h2>
-              <p className="text-xl mb-8 opacity-90">
+              <p className="text-xl lg:text-2xl mb-10 opacity-90 leading-relaxed max-w-3xl">
                 Научно-производственная корпорация «Объединенная Вагонная Компания» — 
                 интегрированный провайдер в сфере инжиниринга, производства и сервисного 
                 обслуживания грузовых вагонов нового поколения.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-white text-steel-dark hover:bg-steel-light">
-                  <Icon name="FileText" size={20} className="mr-2" />
+              <div className="flex flex-wrap gap-6">
+                <Button size="lg" className="bg-white/20 backdrop-blur-md text-white border border-white/30 hover:bg-white/30 hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-semibold">
+                  <Icon name="FileText" size={24} className="mr-3" />
                   Каталог продукции
                 </Button>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-steel-dark">
-                  <Icon name="Play" size={20} className="mr-2" />
+                <Button variant="outline" size="lg" className="border-2 border-white/50 text-white hover:bg-white hover:text-steel-dark hover:scale-105 transition-all duration-300 backdrop-blur-md px-8 py-4 text-lg font-semibold">
+                  <Icon name="Play" size={24} className="mr-3" />
                   О компании
                 </Button>
               </div>
             </div>
-            <div className="relative">
-              <div className="bg-gradient-to-br from-steel-light/20 to-transparent p-8 rounded-2xl backdrop-blur-sm">
-                <div className="grid grid-cols-2 gap-6 text-center">
-                  <div>
-                    <div className="text-3xl font-bold mb-2">20,000+</div>
-                    <div className="text-steel-light">Вагонов в год</div>
+            <div className="relative scroll-reveal">
+              <div className="glass-effect p-10 rounded-3xl shadow-2xl hover-lift">
+                <div className="grid grid-cols-2 gap-8 text-center">
+                  <div className="group">
+                    <div className="text-5xl font-bold mb-3 gradient-text group-hover:scale-110 transition-transform duration-300">20,000+</div>
+                    <div className="text-white/80 text-lg font-medium">Вагонов в год</div>
                   </div>
-                  <div>
-                    <div className="text-3xl font-bold mb-2">40+</div>
-                    <div className="text-steel-light">Лет опыта</div>
+                  <div className="group">
+                    <div className="text-5xl font-bold mb-3 gradient-text group-hover:scale-110 transition-transform duration-300">40+</div>
+                    <div className="text-white/80 text-lg font-medium">Лет опыта</div>
                   </div>
-                  <div>
-                    <div className="text-3xl font-bold mb-2">8</div>
-                    <div className="text-steel-light">Производственных площадок</div>
+                  <div className="group">
+                    <div className="text-5xl font-bold mb-3 gradient-text group-hover:scale-110 transition-transform duration-300">8</div>
+                    <div className="text-white/80 text-lg font-medium">Производственных площадок</div>
                   </div>
-                  <div>
-                    <div className="text-3xl font-bold mb-2">50+</div>
-                    <div className="text-steel-light">Стран поставки</div>
+                  <div className="group">
+                    <div className="text-5xl font-bold mb-3 gradient-text group-hover:scale-110 transition-transform duration-300">50+</div>
+                    <div className="text-white/80 text-lg font-medium">Стран поставки</div>
                   </div>
                 </div>
               </div>
@@ -193,8 +193,8 @@ const Index = () => {
                 {wagonTypes.map((wagon) => (
                   <Card 
                     key={wagon.id} 
-                    className={`cursor-pointer transition-all hover:shadow-lg ${
-                      selectedWagon === wagon.id ? 'ring-2 ring-primary shadow-lg' : ''
+                    className={`cursor-pointer transition-all duration-300 hover-lift ${
+                      selectedWagon === wagon.id ? 'ring-2 ring-primary shadow-xl scale-105 glass-effect' : 'hover:shadow-xl'
                     }`}
                     onClick={() => setSelectedWagon(wagon.id)}
                   >
@@ -235,7 +235,7 @@ const Index = () => {
                             <img 
                               src={wagonTypes.find(w => w.id === selectedWagon)?.image}
                               alt={wagonTypes.find(w => w.id === selectedWagon)?.name}
-                              className="w-full h-48 object-cover rounded-lg shadow-md"
+                              className="w-full h-64 object-cover rounded-xl shadow-2xl hover:scale-105 transition-transform duration-500"
                             />
                           </div>
                           <div className="space-y-4">
@@ -243,10 +243,10 @@ const Index = () => {
                             <p className="text-muted-foreground leading-relaxed">
                               {wagonTypes.find(w => w.id === selectedWagon)?.detailedDescription}
                             </p>
-                            <div className="flex flex-wrap gap-2">
-                              <Badge variant="outline">Современная конструкция</Badge>
-                              <Badge variant="outline">Высокая надёжность</Badge>
-                              <Badge variant="outline">Экологичность</Badge>
+                            <div className="flex flex-wrap gap-3">
+                              <Badge className="bg-gradient-to-r from-blue-500 to-purple-600 text-white border-0 px-4 py-2 text-sm font-medium">Современная конструкция</Badge>
+                              <Badge className="bg-gradient-to-r from-green-500 to-teal-600 text-white border-0 px-4 py-2 text-sm font-medium">Высокая надёжность</Badge>
+                              <Badge className="bg-gradient-to-r from-emerald-500 to-green-600 text-white border-0 px-4 py-2 text-sm font-medium">Экологичность</Badge>
                             </div>
                           </div>
                         </div>
@@ -356,26 +356,28 @@ const Index = () => {
           <h2 className="text-4xl font-bold text-center mb-12">Производственные мощности</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {productionFacilities.map((facility, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-3">
-                    <Icon name="Factory" size={24} />
-                    {facility.name}
+              <Card key={index} className="hover-lift transition-all duration-300 border-0 shadow-lg hover:shadow-2xl bg-gradient-to-br from-white to-gray-50">
+                <CardHeader className="pb-4">
+                  <CardTitle className="flex items-center gap-4 text-xl">
+                    <div className="p-3 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl text-white">
+                      <Icon name="Factory" size={28} />
+                    </div>
+                    <span className="gradient-text">{facility.name}</span>
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex items-center gap-2">
-                    <Icon name="MapPin" size={18} className="text-muted-foreground" />
-                    <span>{facility.location}</span>
+                <CardContent className="space-y-4">
+                  <div className="flex items-center gap-3 p-3 rounded-lg bg-gray-50/50">
+                    <Icon name="MapPin" size={20} className="text-blue-600" />
+                    <span className="font-medium">{facility.location}</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Icon name="BarChart3" size={18} className="text-muted-foreground" />
-                    <span>{facility.capacity}</span>
+                  <div className="flex items-center gap-3 p-3 rounded-lg bg-gray-50/50">
+                    <Icon name="BarChart3" size={20} className="text-green-600" />
+                    <span className="font-medium">{facility.capacity}</span>
                   </div>
-                  <Badge variant="secondary">{facility.specialization}</Badge>
+                  <Badge className="bg-gradient-to-r from-purple-500 to-pink-600 text-white border-0 px-4 py-2 text-sm font-medium">{facility.specialization}</Badge>
                 </CardContent>
               </Card>
-            ))}
+            ))
           </div>
         </div>
       </section>
